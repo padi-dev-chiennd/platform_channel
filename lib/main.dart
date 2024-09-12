@@ -42,12 +42,12 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: ListView(
           children:  [
-            ListTile(
-              title: const Text("Binary Message"),
-              onTap: (){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) =>const BinaryMessageDemo()));
-              },
-            ),
+            // ListTile(
+            //   title: const Text("Binary Message"),
+            //   onTap: (){
+            //     Navigator.of(context).push(MaterialPageRoute(builder: (context) =>const BinaryMessageDemo()));
+            //   },
+            // ),
             ListTile(
               title: const Text("MethodChannel"),
               onTap: (){
