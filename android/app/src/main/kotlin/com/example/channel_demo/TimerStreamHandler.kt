@@ -20,12 +20,11 @@ class CustomStreamHandler : EventChannel.StreamHandler {
             isListening = true
             scope.launch {
                 while (isListening) {
-                    // Generate your value (e.g., timer value) here
                     val value = counter++
                     withContext(Dispatchers.Main) {
                         events.success(value)
                     }
-                    delay(1000) // Send value every 1000 milliseconds (1 second)
+                    delay(1000)
                 }
             }
         }

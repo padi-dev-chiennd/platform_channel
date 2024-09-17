@@ -82,22 +82,10 @@ class _MethodChannelDemoState extends State<MethodChannelDemo> {
             ),
             OutlinedButton.icon(
                 onPressed: () async {
-                  try {
-                    final value = await MethodChannelCounter.tryMe();
-                    setState(() {
-                      count = value;
-                    });
-                  } catch (error) {
-                    if (!mounted) return;
-                    if (error is MissingPluginException) {
-                      showMessage(context, (error.message!));
-                    } else if (error is PlatformException) {
-                      showMessage(context, (error.message!));
-                    }
-                  }
+                    await MethodChannelCounter.intentNative();
                 },
                 icon: const Icon(Icons.error),
-                label: const Text("Try me")),
+                label: const Text("Intent")),
           ],
         ),
       ),

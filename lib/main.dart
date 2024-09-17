@@ -37,17 +37,16 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title:const Text("Platform Channels"),
-      ),
+       ),
       body: Center(
         child: ListView(
           children:  [
-            // ListTile(
-            //   title: const Text("Binary Message"),
-            //   onTap: (){
-            //     Navigator.of(context).push(MaterialPageRoute(builder: (context) =>const BinaryMessageDemo()));
-            //   },
-            // ),
+            ListTile(
+              title: const Text("Binary Message"),
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) =>const BinaryMessageDemo()));
+              },
+            ),
             ListTile(
               title: const Text("MethodChannel"),
               onTap: (){
